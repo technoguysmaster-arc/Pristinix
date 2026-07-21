@@ -207,9 +207,9 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-none transition-all duration-500 ${
         scrolled
-          ? "nav-blur bg-black/80 border-b border-white/5 shadow-2xl shadow-black/50"
+          ? "nav-blur bg-black/90 shadow-2xl shadow-black/50"
           : "bg-transparent"
       }`}
     >
@@ -266,7 +266,7 @@ function Navbar() {
       <div
         className={`md:hidden transition-all duration-300 overflow-hidden ${
           mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-        } bg-black/95 border-b border-white/5`}
+        } bg-black/95 border-b border-white/5 border-t-0`}
       >
         <div className="px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
@@ -300,7 +300,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-black border-none"
     >
       {/* Background Image */}
       <div
@@ -310,8 +310,7 @@ function Hero() {
       {/* Dark overlay */}
       <div className="hero-overlay absolute inset-0" />
 
-      {/* Red accent lines */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/60 to-transparent" />
+      {/* Red accent line (bottom only) */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/40 to-transparent" />
 
       {/* Animated radial glow */}
