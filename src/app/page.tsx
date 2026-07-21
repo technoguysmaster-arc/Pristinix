@@ -925,11 +925,24 @@ function Footer() {
         {/* Divider */}
         <div className="border-t border-white/5 my-8" />
 
-        {/* Bottom Bar: Copyright */}
+        {/* Bottom Bar: Copyright & Developer Credit */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-neutral-500 text-xs text-center sm:text-left">
-            © {new Date().getFullYear()} Pristinix. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-neutral-500 text-xs text-center sm:text-left">
+            <span>© {new Date().getFullYear()} Pristinix. All rights reserved.</span>
+            <span className="hidden sm:inline text-neutral-700">|</span>
+            <span>
+              Designed & Developed by{" "}
+              <a
+                href="https://www.instagram.com/code.craft_agency/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-500 hover:text-white transition-colors duration-300 font-medium"
+              >
+                CodeCraft Agency
+              </a>
+            </span>
+          </div>
+
           <div className="flex items-center gap-6">
             <a href="#services" className="text-neutral-500 hover:text-white text-xs transition-colors">
               Services
