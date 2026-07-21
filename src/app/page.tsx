@@ -731,58 +731,96 @@ function ContactCTA() {
       <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-neutral-950 to-neutral-950" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-600/40 to-transparent" />
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <div className="inline-flex items-center gap-2 text-red-500 text-xs font-bold uppercase tracking-widest mb-6">
-          <span className="w-8 h-px bg-red-600" />
-          Ready to Book?
-          <span className="w-8 h-px bg-red-600" />
-        </div>
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="inline-flex items-center gap-2 text-red-500 text-xs font-bold uppercase tracking-widest mb-6">
+            <span className="w-8 h-px bg-red-600" />
+            Ready to Book?
+            <span className="w-8 h-px bg-red-600" />
+          </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5 leading-tight">
-          Your Car Deserves <br />
-          <span className="text-red-500">The Best Care</span>
-        </h2>
-        <p className="text-neutral-400 text-base md:text-lg mb-10 max-w-xl mx-auto">
-          Book in seconds via WhatsApp. We'll confirm your slot and arrive on
-          time at your location.
-        </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-5 leading-tight">
+            Your Car Deserves <br />
+            <span className="text-red-500">The Best Care</span>
+          </h2>
+          <p className="text-neutral-400 text-base md:text-lg mb-10 max-w-xl mx-auto">
+            Book in seconds via WhatsApp. We'll confirm your slot and arrive on
+            time at your location.
+          </p>
 
-        <a
-          href={buildWhatsAppLink()}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-200 red-glow hover:scale-105 active:scale-95"
-        >
-          <MessageCircle size={22} />
-          Book on WhatsApp
-          <ArrowRight size={20} />
-        </a>
-
-        {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 flex-wrap">
           <a
-            href="tel:+916281984964"
-            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
-          >
-            <Phone size={15} className="text-red-500" />
-            +91 62819 84964
-          </a>
-          <a
-            href="mailto:pristinixdoorstepdetailing@gmail.com"
-            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
-          >
-            <Mail size={15} className="text-red-500" />
-            pristinixdoorstepdetailing@gmail.com
-          </a>
-          <a
-            href="https://www.instagram.com/pristinix.in"
+            href={buildWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
+            className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-200 red-glow hover:scale-105 active:scale-95"
           >
-            <Instagram size={15} className="text-red-500" />
-            @pristinix.in
+            <MessageCircle size={22} />
+            Book on WhatsApp
+            <ArrowRight size={20} />
           </a>
+
+          {/* Contact Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12 flex-wrap">
+            <a
+              href="tel:+916281984964"
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
+            >
+              <Phone size={15} className="text-red-500" />
+              +91 62819 84964
+            </a>
+            <a
+              href="mailto:pristinixdoorstepdetailing@gmail.com"
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
+            >
+              <Mail size={15} className="text-red-500" />
+              pristinixdoorstepdetailing@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/pristinix.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
+            >
+              <Instagram size={15} className="text-red-500" />
+              @pristinix.in
+            </a>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/5 my-12" />
+
+        {/* Find Us Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Column 1: Address Details */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+            <h3 className="text-white text-2xl font-black">Visit Our Studio</h3>
+            <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
+              13-3-506/320/56, Sant Dhor Kakkayya Marg, MCH Colony, Jiyaguda, Hyderabad, Telangana 500006
+            </p>
+            <a
+              href="https://maps.app.goo.gl/FHiPsdF7NBzBTnoa6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-6 py-3 rounded-lg transition-all duration-200 red-glow-sm hover:scale-105 active:scale-95"
+            >
+              Get Directions
+              <ArrowRight size={16} />
+            </a>
+          </div>
+
+          {/* Column 2: Embedded Google Map */}
+          <div className="w-full h-64 sm:h-80 rounded-xl border border-neutral-800 overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3446.0768620717786!2d78.45052599906921!3d17.361861463078185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97be7624765f%3A0xacdad0ffc6c73514!2s13-3-506%2F320%2F56%2C%20Sant%20Dhor%20Kakkayya%20Marg%2C%20MCH%20Colony%2C%20Jiyaguda%2C%20Hyderabad%2C%20Telangana%20500006!5e1!3m2!1sen!2sin!4v1784647665705!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -793,44 +831,117 @@ function ContactCTA() {
 
 function Footer() {
   return (
-    <footer className="bg-black border-t border-white/5 py-8">
+    <footer className="bg-black border-t border-white/5 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-          {/* Logo */}
-          <a href="#" className="flex items-center transition-transform hover:scale-105">
-            <Image
-              src="/logo.png"
-              alt="Pristinix Logo"
-              width={140}
-              height={45}
-              className="h-10 w-auto object-contain"
-            />
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:items-start">
+          {/* Left Side: Logo & Links */}
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <a href="#" className="flex items-center transition-transform hover:scale-105">
+              <Image
+                src="/logo.png"
+                alt="Pristinix Logo"
+                width={140}
+                height={45}
+                className="h-10 w-auto object-contain"
+              />
+            </a>
+            
+            {/* Tagline/Description */}
+            <p className="text-neutral-400 text-sm max-w-sm text-center md:text-left">
+              Premium doorstep car detailing and washing services. Hand-crafted shine right at your home or office.
+            </p>
 
-          {/* Links */}
-          <div className="flex items-center gap-5 flex-wrap justify-center">
-            <a
-              href="mailto:pristinixdoorstepdetailing@gmail.com"
-              className="flex items-center gap-1.5 text-neutral-500 hover:text-white text-xs transition-colors"
-            >
-              <Mail size={12} />
-              pristinixdoorstepdetailing@gmail.com
-            </a>
-            <a
-              href="https://www.instagram.com/pristinix.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-neutral-500 hover:text-white text-xs transition-colors"
-            >
-              <Instagram size={12} />
-              pristinix.in
-            </a>
+            {/* Links */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
+              <a
+                href="mailto:pristinixdoorstepdetailing@gmail.com"
+                className="flex items-center gap-1.5 text-neutral-400 hover:text-white text-xs transition-colors"
+              >
+                <Mail size={14} className="text-red-500" />
+                pristinixdoorstepdetailing@gmail.com
+              </a>
+              <a
+                href="https://www.instagram.com/pristinix.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-neutral-400 hover:text-white text-xs transition-colors"
+              >
+                <Instagram size={14} className="text-red-500" />
+                pristinix.in
+              </a>
+            </div>
           </div>
 
-          {/* Copyright */}
-          <p className="text-neutral-600 text-xs">
+          {/* Right Side: Scan to Connect */}
+          <div className="flex flex-col items-center md:items-end gap-3">
+            <h4 className="text-white text-sm font-semibold tracking-wider uppercase text-center md:text-right">
+              Scan to Connect
+            </h4>
+            <div className="flex flex-col sm:flex-row gap-4 items-center mt-1">
+              {/* QR Code 1: Google Review */}
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJUz6iXACXyzsRDoa-P_QP1hY&source=g.page.m.qc._&laa=gpay-review-qr-tab-qr-code"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 group cursor-pointer"
+              >
+                <div className="bg-white p-1 rounded-lg shadow-lg border border-white/10 group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src="/gmb-qr.jpg"
+                    alt="Scan for Google Review"
+                    width={112}
+                    height={112}
+                    className="w-28 h-28 object-contain rounded-md"
+                  />
+                </div>
+                <span className="text-[10px] text-neutral-400 group-hover:text-white font-medium tracking-wide transition-colors">
+                  Rate Us on Google
+                </span>
+              </a>
+
+              {/* QR Code 2: Instagram */}
+              <a
+                href="https://www.instagram.com/pristinix.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 group cursor-pointer"
+              >
+                <div className="bg-white p-1 rounded-lg shadow-lg border border-white/10 group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src="/insta-qr.jpg"
+                    alt="Scan for Instagram"
+                    width={112}
+                    height={112}
+                    className="w-28 h-28 object-contain rounded-md"
+                  />
+                </div>
+                <span className="text-[10px] text-neutral-400 group-hover:text-white font-medium tracking-wide transition-colors">
+                  Follow @pristinix.in
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/5 my-8" />
+
+        {/* Bottom Bar: Copyright */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-neutral-500 text-xs text-center sm:text-left">
             © {new Date().getFullYear()} Pristinix. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            <a href="#services" className="text-neutral-500 hover:text-white text-xs transition-colors">
+              Services
+            </a>
+            <a href="#paint-protection" className="text-neutral-500 hover:text-white text-xs transition-colors">
+              Paint Protection
+            </a>
+            <a href="#membership" className="text-neutral-500 hover:text-white text-xs transition-colors">
+              Care Plans
+            </a>
+          </div>
         </div>
       </div>
     </footer>
